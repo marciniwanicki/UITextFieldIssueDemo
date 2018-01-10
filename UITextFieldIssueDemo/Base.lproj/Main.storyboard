@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UITextFieldIssueDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITextField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjY-rG-BJJ">
+                                <rect key="frame" x="116" y="50" width="143.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS 11 Selection Issue - Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25n-5B-21s">
+                                <rect key="frame" x="73.5" y="94" width="228" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select me" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CxX-zC-63y">
+                                <rect key="frame" x="30" y="165" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mg2-Bm-cbh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Nx-S7-CwA">
+                                <rect key="frame" x="30" y="213" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="voW-Jt-Rcw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-Pt-bTH">
+                                <rect key="frame" x="83" y="261" width="209" height="23"/>
+                                <state key="normal" title="Start updating 2nd UITextField"/>
+                                <connections>
+                                    <action selector="onOffTimerWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3p-fn-Ykn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FH-HX-GYX">
+                                <rect key="frame" x="30" y="304" width="315" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1T-JF-IZ8">
+                                <rect key="frame" x="30" y="329" width="315" height="100.5"/>
+                                <string key="text">(1) Start automatic updates of 2nd UITextField by tapping on the button; (2) Select text in 1st UITextField (to see select/select all or cut/copy options); Regression: On iOS 11 selection options menu will be dismissed after 2nd UITextField gets updated.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZjY-rG-BJJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="3IQ-uQ-BdN"/>
+                            <constraint firstItem="9Nx-S7-CwA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Aik-oP-E1I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CxX-zC-63y" secondAttribute="trailing" constant="30" id="CwJ-8q-pBe"/>
+                            <constraint firstItem="ZjY-rG-BJJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JJ0-cC-C3e"/>
+                            <constraint firstItem="25n-5B-21s" firstAttribute="top" secondItem="ZjY-rG-BJJ" secondAttribute="bottom" constant="8" id="LrK-zM-C5u"/>
+                            <constraint firstItem="9Nx-S7-CwA" firstAttribute="top" secondItem="CxX-zC-63y" secondAttribute="bottom" constant="8" id="PCM-0G-k9A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o1T-JF-IZ8" secondAttribute="trailing" constant="30" id="QpU-Yh-qGw"/>
+                            <constraint firstItem="CxX-zC-63y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="XdH-aL-fLW"/>
+                            <constraint firstItem="4FH-HX-GYX" firstAttribute="top" secondItem="AcI-Pt-bTH" secondAttribute="bottom" constant="20" id="eef-xy-kXr"/>
+                            <constraint firstItem="AcI-Pt-bTH" firstAttribute="top" secondItem="9Nx-S7-CwA" secondAttribute="bottom" constant="8" id="gK7-tM-dCo"/>
+                            <constraint firstItem="CxX-zC-63y" firstAttribute="top" secondItem="25n-5B-21s" secondAttribute="bottom" constant="50" id="iA8-5p-fb8"/>
+                            <constraint firstItem="o1T-JF-IZ8" firstAttribute="top" secondItem="4FH-HX-GYX" secondAttribute="bottom" constant="8" id="o29-NK-odg"/>
+                            <constraint firstItem="o1T-JF-IZ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rOl-b2-dz8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4FH-HX-GYX" secondAttribute="trailing" constant="30" id="sEM-Ma-LlM"/>
+                            <constraint firstItem="25n-5B-21s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sU1-Nf-nhz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Nx-S7-CwA" secondAttribute="trailing" constant="30" id="sjw-G1-CKq"/>
+                            <constraint firstItem="4FH-HX-GYX" firstAttribute="top" secondItem="9Nx-S7-CwA" secondAttribute="bottom" constant="51" id="tv8-uy-nIx"/>
+                            <constraint firstItem="4FH-HX-GYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="uc7-rX-Jjw"/>
+                            <constraint firstItem="AcI-Pt-bTH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wz4-rA-xc9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstTextField" destination="CxX-zC-63y" id="ZCV-ci-jzR"/>
+                        <outlet property="onOffTimerButton" destination="AcI-Pt-bTH" id="ScP-02-ayo"/>
+                        <outlet property="secondTextField" destination="9Nx-S7-CwA" id="LIw-VV-65I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
